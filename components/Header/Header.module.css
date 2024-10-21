@@ -1,0 +1,153 @@
+.header {
+    left: 0;
+    top: 0;
+    z-index: 40;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    background-color: #171717;
+    color: white;
+}
+
+.sticky {
+    position: fixed;
+    z-index: 9999;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.headerInner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 60px;
+}
+
+.headerLogo {
+    display: block;
+}
+
+.small {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.navbarToggler {
+    display: none;
+}
+
+.togglerBar {
+    display: block;
+    position: relative;
+    margin: 6px 0px;
+    height: 2px;
+    background-color: var(--black);
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+    width: 30px;
+}
+
+
+.rotate45 {
+    transform: rotate(45deg) translate(6px, 5px);
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.negRotate45 {
+    transform: rotate(-45deg) translate(6px, -5px);
+}
+
+.visible {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+@media screen and (min-width: 769px) {
+    .navbar {
+        visibility: visible;
+        opacity: 1;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+    }
+}
+
+.navList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.navItem {
+    margin-left: 40px;
+}
+
+@media screen and (max-width: 768px) {
+
+    .navbarToggler {
+        position: absolute;
+        display: block;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 6px 12px;
+        cursor: pointer;
+        border-radius: 8px;
+    }
+
+    .navbar {
+        background-color: white;
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.3s ease;
+        top: 100%;
+        right: 0;
+        width: 250px;
+        padding: 20px;
+    }
+
+    .navList {
+        flex-direction: column;
+    }
+
+    .navItem {
+        position: relative;
+        margin-left: 0px;
+    }
+}
+
+
+.navLink {
+    display: block;
+    padding: 10px 0;
+    color: #333;
+    text-decoration: none;
+}
+
+.active {
+    color: #ff5722;
+}
