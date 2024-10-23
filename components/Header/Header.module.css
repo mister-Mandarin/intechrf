@@ -32,17 +32,9 @@
     align-items: center;
 }
 
-.logo {
-    width: 60px;
-}
 
 .headerLogo {
     display: block;
-}
-
-.small {
-    padding-top: 10px;
-    padding-bottom: 10px;
 }
 
 .menu {
@@ -50,47 +42,63 @@
     align-items: center;
 }
 
-.navbarToggler {
-    display: none;
-}
-
-.togglerBar {
-    display: block;
-    position: relative;
-    margin: 6px 0px;
-    height: 2px;
-    background-color: var(--black);
-    transition-property: all;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 300ms;
-    width: 30px;
-}
-
-
-.rotate45 {
-    transform: rotate(45deg) translate(6px, 5px);
-}
-
-.hidden {
+.menuToggle {
+    margin-right: -15px;
     opacity: 0;
 }
 
-.negRotate45 {
-    transform: rotate(-45deg) translate(6px, -5px);
+.menuToggle:checked ~ .menuButton > span {
+    transform: rotate(45deg);
 }
 
-.visible {
-    visibility: visible !important;
-    opacity: 1 !important;
+.menuToggle:checked ~ .menuButton > span::before {
+    top: 0;
+    transform: rotate(0);
 }
 
-@media screen and (min-width: 769px) {
-    .navbar {
-        visibility: visible;
-        opacity: 1;
-        border: 1px solid rgba(0, 0, 0, 0.1);
-        transition: all 0.3s ease;
-    }
+.menuToggle:checked ~ .menuButton > span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+
+.menuButton {
+    display: flex;
+    align-items: center;
+
+    width: 26px;
+    height: 26px;
+
+    cursor: pointer;
+    z-index: 1;
+}
+
+.menuButton > span,
+.menuButton > span::before,
+.menuButton > span::after {
+    display: block;
+    position: absolute;
+
+    width: 26px;
+    height: 2px;
+
+    background-color: #616161;
+
+    transition-duration: .25s;
+}
+
+.menuButton > span::before {
+    content: '';
+    top: -8px;
+}
+
+.menuButton > span::after {
+    content: '';
+    top: 8px;
+}
+
+.menuToggle:checked ~ .navbar {
+    visibility: visible;
+    opacity: 1;
 }
 
 .navList {
@@ -106,17 +114,6 @@
 }
 
 @media screen and (max-width: 768px) {
-
-    .navbarToggler {
-        position: absolute;
-        display: block;
-        right: 20px;
-        top: 50%;
-        transform: translateY(-50%);
-        padding: 6px 12px;
-        cursor: pointer;
-        border-radius: 8px;
-    }
 
     .navbar {
         background-color: white;
@@ -136,10 +133,9 @@
 
     .navItem {
         position: relative;
-        margin-left: 0px;
+        margin-left: 0;
     }
 }
-
 
 .navLink {
     display: block;

@@ -42,42 +42,19 @@ export default function Header() {
               className={cn(styles.headerLogo, {
                 [styles.small]: sticky
               })}>
-              <Image
-                src={Logo}
-                alt="logo"
-                width={217}
-                height={62}
-                //className={styles.darkLogo}
-              />
+              <Image src={Logo} alt="logo" width={217} height={62} />
             </Link>
           </div>
           <div className={styles.menu}>
-            <button
-              onClick={navbarToggleHandler}
-              id="navbarToggler"
-              aria-label="Mobile Menu"
-              className={styles.navbarToggler}>
-              <span
-                className={cn(styles.togglerBar, {
-                  [styles.rotate45]: navbarOpen
-                })}
-              />
-              {/*<span*/}
-              {/*  className={cn(styles.togglerBar, {*/}
-              {/*    [styles.hidden]: navbarOpen*/}
-              {/*  })}*/}
-              {/*/>*/}
-              <span
-                className={cn(styles.togglerBar, {
-                  [styles.negRotate45]: navbarOpen
-                })}
-              />
-            </button>
-            <nav
-              id="navbarCollapse"
-              className={cn(styles.navbar, {
-                [styles.visible]: navbarOpen
-              })}>
+            <input
+              className={styles.menuToggle}
+              id="menu__toggle"
+              type="checkbox"
+            />
+            <label className={styles.menuButton} htmlFor="menu__toggle">
+              <span></span>
+            </label>
+            <nav id="navbarCollapse" className={cn(styles.navbar)}>
               <ul className={styles.navList}>
                 {menuData.map((menuItem, index) => (
                   <li key={index} className={styles.navItem}>
