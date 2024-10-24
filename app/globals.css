@@ -1,39 +1,40 @@
 :root {
-  --white: #ffffff;
-  --black: #000000;
-  --foreground: #171717;
+    --white: #ffffff;
+    --black: #000000;
+    --foreground: #171717;
 
-  --h2-font-size:                 46px;
-  --h3-font-size:                 32px;
-  --h4-font-size:                 28px;
-  --h5-font-size:                 24px;
-  --h6-font-size:                 22px;
-  --p-font-size:                  20px;
-  --btn-font-size:                16px;
-  --form-btn-font-size:           18px;
-  --menu-font-size:               16px;
+    --main-gradient: linear-gradient(45.00deg, rgb(31, 48, 216) 0%, rgb(56, 160, 245) 100%);
+    --h2-font-size: 46px;
+    --h3-font-size: 32px;
+    --h4-font-size: 28px;
+    --h5-font-size: 24px;
+    --h6-font-size: 22px;
+    --p-font-size: 20px;
+    --btn-font-size: 16px;
+    --form-btn-font-size: 18px;
+    --menu-font-size: 16px;
 
-  --border-radius-large:          100px;
-  --border-radius-medium:         20px;
-  --border-radius-small:          10px;
+    --border-radius-large: 100px;
+    --border-radius-medium: 20px;
+    --border-radius-small: 10px;
 
-  --font-weight-thin:             200;
-  --font-weight-light:            300;
-  --font-weight-normal:           400;
-  --font-weight-bold:             700;
+    --font-weight-thin: 200;
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
 }
 
 html,
 body {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 
-  color: var(--white);
-  background: var(--white);
+    color: var(--white);
+    background: var(--white);
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 h2,
@@ -41,7 +42,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--white);
+    color: var(--white);
 }
 
 h1,
@@ -50,64 +51,64 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
 }
 
 h1 {
-  font-size: clamp(20px, 4vw, 48px);
-  font-weight: var(--font-weight-bold);
-  line-height: clamp(20px, 4vw, 61px);
+    font-size: clamp(22px, 4vw, 48px);
+    font-weight: var(--font-weight-bold);
+    /*line-height: clamp(20px, 4vw, 61px);*/
 }
 
 h2 {
-  font-size: var(--h2-font-size);
+    font-size: var(--h2-font-size);
 }
 
 h3 {
-  font-size: var(--h3-font-size);
+    font-size: var(--h3-font-size);
 }
 
 h4 {
-  font-size: var(--h4-font-size);
+    font-size: var(--h4-font-size);
 }
 
 h5 {
-  font-size: var(--h5-font-size);
+    font-size: var(--h5-font-size);
 }
 
 h6 {
-  font-size: var(--h6-font-size);
+    font-size: var(--h6-font-size);
 }
 
 p {
-  color: var(--p-color);
-  font-size: var(--p-font-size);
-  font-weight: var(--font-weight-light);
+    color: var(--p-color);
+    font-size: var(--p-font-size);
+    font-weight: var(--font-weight-light);
 }
 
 ul li {
-  color: var(--p-color);
-  font-size: var(--p-font-size);
-  font-weight: var(--font-weight-light);
+    color: var(--p-color);
+    font-size: var(--p-font-size);
+    font-weight: var(--font-weight-light);
 }
 
 a,
 button {
-  touch-action: manipulation;
-  transition: all 0.3s;
+    touch-action: manipulation;
+    transition: all 0.3s;
 }
 
 a {
-  display: inline-block;
-  color: var(--primary-color);
-  text-decoration: none;
+    display: inline-block;
+    color: var(--primary-color);
+    text-decoration: none;
 }
 
 a:hover {
-  color: var(--link-hover-color);
+    color: var(--link-hover-color);
 }
 
 b,
 strong {
-  font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
 }

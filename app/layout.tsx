@@ -13,8 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html suppressHydrationWarning lang="ru">
-      <head />
-      <body className={cn(font.className)}>
+      <body className={font.className}>
         <Header />
         {children}
       </body>

@@ -1,5 +1,6 @@
 import styles from './MainScreen.module.css';
 import BlockContainer from '@/components/BlockContainer/BlockContainer';
+import Button from '@/components/Button/Button';
 
 export default function MainScreen() {
   return (
@@ -11,11 +12,9 @@ export default function MainScreen() {
         </h1>
         <p className={styles.description}>
           Поставка компонентов с гарантией качества и датой производства не
-          старше 3 лет.{' '}
+          старше 3 лет.
         </p>
-        <a href="#contact" className={styles.button}>
-          Связаться с нами
-        </a>
+        <Button icon={'search'}>Подробнее</Button>
       </BlockContainer>
     </div>
   );
